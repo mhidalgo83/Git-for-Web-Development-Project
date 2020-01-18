@@ -99,8 +99,25 @@ Link for CSS + HTML Review exercise: https://codepen.io/mhidalgo83/pen/QWwVRMd
 Stretch Questions
 
     1. What is the difference between an inline element and a block element?
-        
+       An inline element doesn't cause a line break and doesn't take up the width of the page, only enough space defined
+       by the element. A block element causes a line break and takes up the entire width of the page. 
     2. What happens when an element is positioned absolutely? 
+       An element with "position: absolute" is positioned relative to the nearest parent element. 
     3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
-    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+       Add the display: inline property to the element, and then set the width accordingly.
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default
+       and 1 element that is display inline-block by default?
+        3 elements that are display: block by default:
+        <p>, <div>, <section>
+        2 elements that display: inline by default:
+        <span>, <img>
+        1 element that is display: inline-block by default:
+        <textarea>
     5. In your own words, explain the box model. What is the fix for the box model? 
+        The box model takes into account 4 things for any element (starting from outside, working my way in):
+        Margin, border, padding, content. When setting height and width, some browsers add width + padding + border =
+        actual width, or height + padding + border = actual height. This means that if you set the same height and width
+        to two different element, but change padding and/or border, they can be different sizes. To fix this, we can 
+        add the property of box-sizing: border-box, which includes padding and border into the width and height calculation,
+        instead of adding to width and height.
+       
