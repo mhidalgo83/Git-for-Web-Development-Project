@@ -1,0 +1,123 @@
+Link for CSS + HTML Review exercise: https://codepen.io/mhidalgo83/pen/QWwVRMd
+
+    1. What is Semantic HTML? 
+        Semantic HTML describes and gives meaning to different elements on a page, instead of just using divs. 
+        It also helps with SEO.
+    2. What is HTML used for? 
+        HTML is the mark-up that is used to layout a webpage.
+    3. What is an attribute and where do we put it? 
+        An attribute provides additional informat about HTML elements. attributes are added in between the element
+        name and the closing bracket of the opening HTML tag.
+    4. What is the h1 tag used for? How many times should I use it on a page?
+        The h1 tag is used as the title of a webpage or post. It should be used only once.
+    5. Name two tags that have required attributes
+        Img tags are require to have src and alt attributes. A tags are required to have the href attribute.
+    6. What do we put in the head of our HTML document?
+        The head of the HTML document includes any metadata information for the web browser, the title of the webpage,
+        and any links to stylesheets or libraries that are going to be used in rendering the webpage to the browser. 
+    7. What is an id? 
+        An id is an attribute that can be added to an HTML element so that it can be styled in CSS.
+    8. What elements can I add an id to? 
+        You can add an id to any element.
+    9. How many times can I use the same id on a page?
+        You can use the same id as much as you want, but best practice is to use it only once, as it should be used
+        to target only a specific HTML element.
+    10. What is a class? 
+        A class is an attribute that can be added to any HTML element. More specific than the element, less specific
+        than an id.
+    11. What elements can I add a class to? 
+        You can add a class to any element.
+    12. How many times can I use the same class on a page? 
+        You can use a class on as many elements as you would like.
+    13. How do I get my link to open in a new tab?
+        You should use the target attribute and set it equal to "_blank".
+    14. What is the alt attribute used for? 
+        The alt attribute is used to write a description of an image, in case the image doesn't render on your webpage.
+    15. How do I reference an id?
+        To reference an id, you use the # symbol before writing the name of the id.
+    16. What is the difference between a section and a div
+        A div is just a plain HTML tag that doesn't describe how the page is laid out, whereas a section shows clear
+        clear delineation between content and is good for SEO.
+    17. What is CSS used for? 
+        CSS is used to style HTML elements to the browser.
+    18. How to we select an element? Example - every h2 on the page
+        h2 {
+            (Input styles here)
+        }
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        A class is used to target many elements, where and id only targets one element.
+        If you are using the same styles on more than one element, you would use a class.
+        If you wanted to add very specific styling to an element, you would use an id.
+    20. How do we select classes in CSS?
+        .(class-name) {
+            (styling in here)
+        }
+    21. How do we select a p element with a single class of “human””?
+        p.human
+    22. What is a parent child selector? When would this be useful? 
+        A parent child selector is used to select child elements within a parent element. This is useful if you 
+        want the child to inherit the styling from the parent, instead of repeating code (which you don't want to do).
+    23. How do you select all links within a div with the class of sidebar?
+        .sidebar a
+    24. What is a pseudo selector?
+        A pseudo selector is used to select elements in a certain state (e.g, :hover).
+    25. What do we use the change the spacing between lines?
+        Using the line-heigh style.
+    26. What do we use to change the spacing between letters?
+        Using the letter-spacing style.
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        text-transform: uppercase, text-transform: lowercase, text-transform: capitalize.
+    28. How do I add a 1px border around my div that is dotted and black?
+        border: dotted 1px black;
+    29. How do I select everything on the page? 
+        *
+    30. How do I write a comment in CSS?
+    /* (Comment goes here) */
+    31. How do I find out what file I am in, when I am using the command line? 
+        You use the pwd command to find your location in your file system.
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        ls
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+        rm removes a file. There is no prompt asking if you are sure that's the file you want to delete,
+        and the file is deleted permanently.
+    34. Why should I use version control? 
+        Version control allows you to add features to a program without affecting a working version of that program,
+        and also allows you to go back in time to a previous version if something is wrong with the current version.
+    35. How often should I commit to github?
+        You should commit as often as possible, but at least when you are finished on a certain feature or portion of a 
+        project.
+    36. What is the command we would use to push our repo up to github? 
+        git push origin (name of branch)
+    37. Walk me through Lambda's git flow. 
+        Once you are in the correct assignment, fork the repo to your github, clone to your machine, add it to the folder
+        where you want it to go, clone it into the folder using GitBash, and create a new branch with "git checkout -b 
+        (name of branch)". Now you can start to work on the project, committing often to make sure your work is saved.
+        Once you are finished with the project, push it to your repo using "git push origin (name of branch)". Add your
+        TL as a collaborator to the project, and create a pull request, asking them to review your work and merge
+        it into the master branch.
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+       An inline element doesn't cause a line break and doesn't take up the width of the page, only enough space defined
+       by the element. A block element causes a line break and takes up the entire width of the page. 
+    2. What happens when an element is positioned absolutely? 
+       An element with "position: absolute" is positioned relative to the nearest parent element. 
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+       Add the display: inline property to the element, and then set the width accordingly.
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default
+       and 1 element that is display inline-block by default?
+        3 elements that are display: block by default:
+        <p>, <div>, <section>
+        2 elements that display: inline by default:
+        <span>, <img>
+        1 element that is display: inline-block by default:
+        <textarea>
+    5. In your own words, explain the box model. What is the fix for the box model? 
+        The box model takes into account 4 things for any element (starting from outside, working my way in):
+        Margin, border, padding, content. When setting height and width, some browsers add width + padding + border =
+        actual width, or height + padding + border = actual height. This means that if you set the same height and width
+        to two different element, but change padding and/or border, they can be different sizes. To fix this, we can 
+        add the property of box-sizing: border-box, which includes padding and border into the width and height calculation,
+        instead of adding to width and height.
+       
